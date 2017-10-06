@@ -8,7 +8,7 @@ ListItemSettingsEditor::ListItemSettingsEditor(QWidget *parent)
       ui(new Ui::ListItemSettingsForm),
       m_listitem(new QtMaterialListItem())
 {
-    m_listitem->setLetter( QString("This is the first, image+icon+text, lineitem" ));
+    m_listitem->setLetter( QString("This is the first, image+icon+text, lineitem. I want the string to be longer and longer to test clipping." ));
     m_listitem->setIcon(QtMaterialTheme::icon("communication", "message"));
     m_listitem->setImage(QImage(":/images/assets/sikh.jpg"));
     QVBoxLayout *layout = new QVBoxLayout;
@@ -25,18 +25,18 @@ ListItemSettingsEditor::ListItemSettingsEditor(QWidget *parent)
     layout->setContentsMargins(20, 20, 20, 20);
 
     QtMaterialListItem *m_listitem2 = new QtMaterialListItem;
-    m_listitem2->setLetter( QString("This is the second, icon+text, lineitem" ));
+    m_listitem2->setLetter( QString("This is the second, icon+text, lineitem. I want the string to be longer and longer to test clipping." ));
     m_listitem2->setIcon(QtMaterialTheme::icon("communication", "message"));
 
     QtMaterialListItem *m_listitem3 = new QtMaterialListItem;
-    m_listitem3->setLetter( QString("This is the third, text only, lineitem" ));
+    m_listitem3->setLetter( QString("This is the third, text only, lineitem. I want the string to be longer and longer to test clipping." ));
 
 //     m_listitem2->setImage(QImage(":/images/assets/sikh.jpg"));
 
 
     layout = new QVBoxLayout;
     layout->setContentsMargins(0, 0, 0, 0);
-    layout->setSpacing(1);
+    layout->setSpacing(0);
     canvas->setLayout(layout);
     layout->addWidget(m_listitem);
     layout->addWidget(m_listitem2);

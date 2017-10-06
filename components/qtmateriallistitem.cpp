@@ -35,11 +35,11 @@ void QtMaterialListItemPrivate::init()
     // type           = Material::LetterListItem;
     useThemeColors = true;
 
-    QFontDatabase db;
-    QFont font(db.font("Times New Roman", "Medium", 16));
-    font.setPointSizeF(16);
-    font.setLetterSpacing(QFont::PercentageSpacing, 102);
-    q->setFont(font);
+//    QFontDatabase db;
+//    QFont font(db.font("Roboto", "Regular", 10));
+//    font.setPointSize(10);
+//    font.setLetterSpacing(QFont::PercentageSpacing, 102);
+//    q->setFont(font);
     q->setContentsMargins(0,0,0,0);
 
     QSizePolicy policy(QSizePolicy::MinimumExpanding,
@@ -56,6 +56,13 @@ QtMaterialListItem::QtMaterialListItem(QWidget *parent)
       d_ptr(new QtMaterialListItemPrivate(this))
 {
     d_func()->init();
+    if( QFontDatabase::addApplicationFont( ":/fonts/rregular" ) == -1 )
+	    setSize(128);
+    QFontDatabase::addApplicationFont( ":/fonts/rmedium" );
+    QFontDatabase::addApplicationFont( ":/fonts/rlight" );
+    QFontDatabase::addApplicationFont( ":/fonts/ubuntu" );
+//    if (QFontDatabase::addApplicationFont( ":/fonts/Roboto/Roboto-Regular.ttf" ) == -1 )
+//      QMessageBox::about( this, "Titolo", "stringa" );
 }
 
 QtMaterialListItem::~QtMaterialListItem()
@@ -213,9 +220,9 @@ void QtMaterialListItem::paintEvent(QPaintEvent *event)
 
     QRect r = rect();
     QRect textRect;
-    const qreal hs = d->size/2;
+    // const qreal hs = d->size/2;
 
-    painter.fillRect( rect(), QColor(215,215,215));
+    painter.fillRect( rect(), QColor(255,255,255));
 
     painter.setRenderHint(QPainter::Antialiasing);
 
@@ -226,18 +233,12 @@ void QtMaterialListItem::paintEvent(QPaintEvent *event)
     if( !d->icon.isNull() && d->image.isNull() )
     {
         textRect = r.adjusted( 72,0,-16,0 );
-//	iconRect = r.adjusted( 16, 16,-16,-16 );
-// IMAGE        painter.drawPixmap(QRect(16, 16, 24, 24), d->pixmap);
-//
         QRect iconGeometry(16, 16, 24, 24);
         QPixmap pixmap = d->icon.pixmap(24, 24);
         QPainter icon(&pixmap);
         icon.setCompositionMode(QPainter::CompositionMode_SourceIn);
         icon.fillRect(pixmap.rect(), QtMaterialStyle::instance().themeColor("text"));
         painter.drawPixmap(iconGeometry, pixmap);
-
-//        painter.drawPixmap(QRect(width()/2-hs, height()/2-hs, d->size, d->size), d->pixmap);
-
     }
     else if( !d->icon.isNull() && ! d->image.isNull() )
     {
@@ -264,67 +265,17 @@ void QtMaterialListItem::paintEvent(QPaintEvent *event)
     else
         textRect = r.adjusted( 16,0,-16,0 );
 
-    painter.setFont( font() );
-    painter.setPen( QtMaterialStyle::instance().themeColor("text") );
+    //QFontDatabase db;
+    //QFont font(db.font("Ubuntu", "Regular", 16));
+    // font.setPointSize(16);
+//    font.setLetterSpacing(QFont::PercentageSpacing, 102);
+    QFont font("Roboto-Regular");
+    font.setPointSize(16);
+
+    painter.setFont( font );
+    painter.setPen(QtMaterialStyle::instance().themeColor("text"));
     painter.setRenderHint(QPainter::Antialiasing);
+
     painter.drawText(textRect, Qt::AlignLeft + Qt::AlignVCenter, QString(d->letter));
 
-/*
-    if (!isEnabled())
-    {
-        QBrush brush;
-        brush.setStyle(Qt::SolidPattern);
-        brush.setColor(QtMaterialStyle::instance().themeColor("disabled"));
-        painter.setPen(Qt::NoPen);
-        painter.setBrush(brush);
-        painter.drawEllipse(QRectF((width()-d->size)/2, (height()-d->size)/2,
-                                   d->size, d->size));
-        return;
-    }
-    */
-/*
-    if (Material::ImageListItem != d->type)
-    {
-        QBrush brush;
-        brush.setStyle(Qt::SolidPattern);
-        brush.setColor(backgroundColor());
-        painter.setPen(Qt::NoPen);
-        painter.setBrush(brush);
-        painter.drawEllipse(QRectF((width()-d->size)/2, (height()-d->size)/2,
-                                   d->size, d->size));
-    }
-
-    switch (d->type)
-    {
-    case Material::ImageListItem:
-    {
-        QPainterPath path;
-        path.addEllipse(width()/2-hs, height()/2-hs, d->size, d->size);
-        painter.setClipPath(path);
-
-        painter.drawPixmap(QRect(width()/2-hs, height()/2-hs, d->size, d->size),
-                           d->pixmap);
-        break;
-    }
-    case Material::IconListItem:
-    {
-        QRect iconGeometry((width()-hs)/2, (height()-hs)/2, hs, hs);
-        QPixmap pixmap = d->icon.pixmap(hs, hs);
-        QPainter icon(&pixmap);
-        icon.setCompositionMode(QPainter::CompositionMode_SourceIn);
-        icon.fillRect(pixmap.rect(), textColor());
-        painter.drawPixmap(iconGeometry, pixmap);
-        break;
-    }
-    case Material::LetterListItem:
-    {
-        painter.setPen(textColor());
-        painter.setBrush(Qt::NoBrush);
-        painter.drawText(r, Qt::AlignCenter, QString(d->letter));
-        break;
-    }
-    default:
-        break;
-    }
-    */
 }
