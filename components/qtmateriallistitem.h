@@ -12,9 +12,9 @@ class QtMaterialListItem : public QWidget
 
 public:
     explicit QtMaterialListItem(QWidget *parent = 0);
-    explicit QtMaterialListItem(const QIcon &icon, QWidget *parent = 0);
-    explicit QtMaterialListItem(const QChar &letter, QWidget *parent = 0);
-    explicit QtMaterialListItem(const QImage &image, QWidget *parent = 0);
+//    explicit QtMaterialListItem(const QIcon &icon, QWidget *parent = 0);
+//    explicit QtMaterialListItem(const QChar &letter, QWidget *parent = 0);
+//    explicit QtMaterialListItem(const QImage &image, QWidget *parent = 0);
     ~QtMaterialListItem();
 
     void setUseThemeColors(bool value);
@@ -31,7 +31,7 @@ public:
     void setSize(int size);
     int size() const;
 
-    void setLetter(const QChar &letter);
+    void setLetter(const QString &letter);
     void setImage(const QImage &image);
     void setIcon(const QIcon &icon);
 

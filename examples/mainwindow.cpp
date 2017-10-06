@@ -20,6 +20,7 @@
 #include "dialogsettingseditor.h"
 #include "drawersettingseditor.h"
 #include "scrollbarsettingseditor.h"
+#include "listitemsettingseditor.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -57,6 +58,7 @@ MainWindow::MainWindow(QWidget *parent)
     DialogSettingsEditor *dialog = new DialogSettingsEditor;
     DrawerSettingsEditor *drawer = new DrawerSettingsEditor;
     ScrollBarSettingsEditor *scrollBar = new ScrollBarSettingsEditor;
+    ListItemSettingsEditor *listItem = new ListItemSettingsEditor;
 
     stack->addWidget(avatar);
     stack->addWidget(badge);
@@ -67,6 +69,7 @@ MainWindow::MainWindow(QWidget *parent)
     stack->addWidget(fab);
     stack->addWidget(flatButton);
     stack->addWidget(iconButton);
+    stack->addWidget(listItem);
     stack->addWidget(progress);
     stack->addWidget(radioButton);
     stack->addWidget(raisedButton);
@@ -86,6 +89,7 @@ MainWindow::MainWindow(QWidget *parent)
     list->addItem("Floating Action Button");
     list->addItem("Flat Button");
     list->addItem("Icon Button");
+    list->addItem("List Item");
     list->addItem("Progress");
     list->addItem("Radio Button");
     list->addItem("Raised Button");

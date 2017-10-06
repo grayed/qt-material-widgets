@@ -10,6 +10,7 @@ SOURCES = mainwindow.cpp \
     raisedbuttonsettingseditor.cpp \
     flatbuttonsettingseditor.cpp \
     iconbuttonsettingseditor.cpp \
+    listitemsettingseditor.cpp \
     progresssettingseditor.cpp \
     circularprogresssettingseditor.cpp \
     slidersettingseditor.cpp \
@@ -29,6 +30,7 @@ HEADERS = mainwindow.h \
     raisedbuttonsettingseditor.h \
     flatbuttonsettingseditor.h \
     iconbuttonsettingseditor.h \
+    listitemsettingseditor.h \
     progresssettingseditor.h \
     circularprogresssettingseditor.h \
     slidersettingseditor.h \
@@ -55,6 +57,7 @@ FORMS += \
     fabsettingsform.ui \
     flatbuttonsettingsform.ui \
     iconbuttonsettingsform.ui \
+    listitemsettingsform.ui \
     progresssettingsform.ui \
     circularprogresssettingsform.ui \
     slidersettingsform.ui \
