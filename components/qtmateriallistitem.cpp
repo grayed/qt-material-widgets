@@ -2,6 +2,7 @@
 #include "qtmateriallistitem_p.h"
 #include <QPainter>
 #include <QFontDatabase>
+#include <QDebug>
 #include "lib/qtmaterialstyle.h"
 
 /*!
@@ -35,11 +36,6 @@ void QtMaterialListItemPrivate::init()
     // type           = Material::LetterListItem;
     useThemeColors = true;
 
-//    QFontDatabase db;
-//    QFont font(db.font("Roboto", "Regular", 10));
-//    font.setPointSize(10);
-//    font.setLetterSpacing(QFont::PercentageSpacing, 102);
-//    q->setFont(font);
     q->setContentsMargins(0,0,0,0);
 
     QSizePolicy policy(QSizePolicy::MinimumExpanding,
@@ -56,13 +52,6 @@ QtMaterialListItem::QtMaterialListItem(QWidget *parent)
       d_ptr(new QtMaterialListItemPrivate(this))
 {
     d_func()->init();
-    if( QFontDatabase::addApplicationFont( ":/fonts/rregular" ) == -1 )
-	    setSize(128);
-    QFontDatabase::addApplicationFont( ":/fonts/rmedium" );
-    QFontDatabase::addApplicationFont( ":/fonts/rlight" );
-    QFontDatabase::addApplicationFont( ":/fonts/ubuntu" );
-//    if (QFontDatabase::addApplicationFont( ":/fonts/Roboto/Roboto-Regular.ttf" ) == -1 )
-//      QMessageBox::about( this, "Titolo", "stringa" );
 }
 
 QtMaterialListItem::~QtMaterialListItem()
@@ -137,7 +126,6 @@ QSize QtMaterialListItem::sizeHint() const
 {
     Q_D(const QtMaterialListItem);
 
-    // return QSize(d->size+2, d->size);
     return QSize(width(), d->size);
 }
 
@@ -146,16 +134,6 @@ void QtMaterialListItem::setSize(int size)
     Q_D(QtMaterialListItem);
 
     d->size = size;
-
-//    if (!d->image.isNull()) {
-//        d->pixmap = QPixmap::fromImage(d->image.scaled(d->size, d->size,
-//                                                       Qt::IgnoreAspectRatio,
-//                                                       Qt::SmoothTransformation));
-//    }
-
-//    QFont f(font());
-//    f.setPointSizeF(size*16/40);
-//    setFont(f);
 
     update();
 }
@@ -211,6 +189,8 @@ Material::ListItemType QtMaterialListItem::type() const
  */
 void QtMaterialListItem::paintEvent(QPaintEvent *event)
 {
+	int iFontWeight = QFont::Normal;
+
     Q_UNUSED(event)
 
     Q_D(QtMaterialListItem);
@@ -220,14 +200,12 @@ void QtMaterialListItem::paintEvent(QPaintEvent *event)
 
     QRect r = rect();
     QRect textRect;
-    // const qreal hs = d->size/2;
 
     painter.fillRect( rect(), QColor(255,255,255));
 
     painter.setRenderHint(QPainter::Antialiasing);
 
     painter.setPen(textColor());
-    // painter.setPen( QtMaterialStyle::instance().themeColor("border"));
     painter.setBrush(Qt::NoBrush);
 
     if( !d->icon.isNull() && d->image.isNull() )
@@ -249,7 +227,6 @@ void QtMaterialListItem::paintEvent(QPaintEvent *event)
         QPixmap pixmap = d->icon.pixmap(24, 24);
         QPainter icon(&pixmap);
         icon.setCompositionMode(QPainter::CompositionMode_SourceIn);
-        // icon.fillRect(pixmap.rect(), textColor());
         icon.fillRect(pixmap.rect(), QtMaterialStyle::instance().themeColor("text"));
         painter.drawPixmap(iconGeometry, pixmap);
 
@@ -265,16 +242,12 @@ void QtMaterialListItem::paintEvent(QPaintEvent *event)
     else
         textRect = r.adjusted( 16,0,-16,0 );
 
-    //QFontDatabase db;
-    //QFont font(db.font("Ubuntu", "Regular", 16));
-    // font.setPointSize(16);
-//    font.setLetterSpacing(QFont::PercentageSpacing, 102);
-    QFont font("Roboto-Regular");
-    font.setPointSize(16);
+    painter.setRenderHint(QPainter::Antialiasing);
+
+    QFont font("Roboto", 16, iFontWeight );
 
     painter.setFont( font );
     painter.setPen(QtMaterialStyle::instance().themeColor("text"));
-    painter.setRenderHint(QPainter::Antialiasing);
 
     painter.drawText(textRect, Qt::AlignLeft + Qt::AlignVCenter, QString(d->letter));
 
