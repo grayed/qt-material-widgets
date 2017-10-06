@@ -257,20 +257,22 @@ I finally took the time to go through and clean up this code. The build includes
 #### Work in progress
 
 - [x] App Bar
+- [ ] Autocomplete
+- [ ] Divider
+- [ ] List
+- [ ] List Item
+- [ ] Paper
+- [ ] Table
 
 #### Not implemented 
 
-- [ ] Autocomplete
+- [ ] Card
 - [ ] Chips
 - [ ] Discrete Slider
-- [ ] Divider
 - [ ] Grid List
 - [ ] Icon Menu
-- [ ] List
 - [ ] Menu
-- [ ] Paper
 - [ ] Search Field
 - [ ] Select Field
 - [ ] Stepper
-- [ ] Table
 - [ ] Toolbar

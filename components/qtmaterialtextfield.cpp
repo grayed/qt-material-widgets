@@ -1,6 +1,5 @@
 #include "qtmaterialtextfield.h"
 #include "qtmaterialtextfield_p.h"
-#include <QFontDatabase>
 #include <QtWidgets/QApplication>
 #include <QPainter>
 #include "qtmaterialtextfield_internal.h"
@@ -29,7 +28,7 @@ void QtMaterialTextFieldPrivate::init()
     label          = 0;
     labelFontSize  = 9.5;
     showLabel      = false;
-    showUnderline = true;
+    showInputLine  = true;
     useThemeColors = true;
 
     q->setFrame(false);
@@ -38,9 +37,7 @@ void QtMaterialTextFieldPrivate::init()
     q->setMouseTracking(true);
     q->setTextMargins(0, 2, 0, 4);
 
-    QFontDatabase db;
-    QFont font(db.font("Roboto", "Regular", 11));
-    q->setFont(font);
+    q->setFont(QFont("Roboto", 11, QFont::Normal));
 
     stateMachine->start();
     QCoreApplication::processEvents();
@@ -211,44 +208,44 @@ QColor QtMaterialTextField::inkColor() const
     }
 }
 
-void QtMaterialTextField::setUnderlineColor(const QColor &color)
+void QtMaterialTextField::setInputLineColor(const QColor &color)
 {
     Q_D(QtMaterialTextField);
 
-    d->underlineColor = color;
+    d->inputLineColor = color;
 
     MATERIAL_DISABLE_THEME_COLORS
     d->stateMachine->setupProperties();
 }
 
-QColor QtMaterialTextField::underlineColor() const
+QColor QtMaterialTextField::inputLineColor() const
 {
     Q_D(const QtMaterialTextField);
 
-    if (d->useThemeColors || !d->underlineColor.isValid()) {
+    if (d->useThemeColors || !d->inputLineColor.isValid()) {
         return QtMaterialStyle::instance().themeColor("border");
     } else {
-        return d->underlineColor;
+        return d->inputLineColor;
     }
 }
 
-void QtMaterialTextField::setShowUnderline(bool value)
+void QtMaterialTextField::setShowInputLine(bool value)
 {
     Q_D(QtMaterialTextField);
 
-    if (d->showUnderline == value) {
+    if (d->showInputLine == value) {
         return;
     }
 
-    d->showUnderline = value;
+    d->showInputLine = value;
     update();
 }
 
-bool QtMaterialTextField::hasUnderline() const
+bool QtMaterialTextField::hasInputLine() const
 {
     Q_D(const QtMaterialTextField);
 
-    return d->showUnderline;
+    return d->showInputLine;
 }
 
 /*!
@@ -294,14 +291,18 @@ void QtMaterialTextField::paintEvent(QPaintEvent *event)
     const int y = height()-1;
     const int wd = width()-5;
 
-    if (d->showUnderline)
+    if (d->showInputLine)
     {
         QPen pen;
         pen.setWidth(1);
-        pen.setColor(underlineColor());
+        pen.setColor(inputLineColor());
+
+        if (!isEnabled()) 
+            pen.setStyle(Qt::DashLine);
+
         painter.setPen(pen);
         painter.setOpacity(1);
-        painter.drawLine(2.5, y, wd, y);
+        painter.drawLine(QLineF(2.5, y, wd, y));
 
         QBrush brush;
         brush.setStyle(Qt::SolidPattern);
