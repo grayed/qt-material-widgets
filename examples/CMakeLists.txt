@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.5.0)
 
 # project
-project(qtmeterial-test)
+project(qtmeterial-examples)
 
 # source
 file(GLOB_RECURSE SOURCES *.cpp *.h *.qrc *.ui)
