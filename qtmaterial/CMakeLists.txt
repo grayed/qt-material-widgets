@@ -14,7 +14,7 @@ set(CMAKE_AUTORCC ON)
 find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
 
 # target
-include_directories(../components)
+include_directories(../qtmaterial)
 add_library(${PROJECT_NAME} STATIC ${SOURCES})
 target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Widgets)
 

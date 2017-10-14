@@ -4,7 +4,7 @@
 #include <QState>
 #include <QEvent>
 #include <QPainter>
-#include "lib/qtmaterialrippleoverlay.h"
+#include "shared/qtmaterialrippleoverlay.h"
 
 /*!
  *  \class QtMaterialFloatingActionButtonPrivate

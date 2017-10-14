@@ -1,7 +1,7 @@
 #ifndef QTMATERIALCHECKBOX_P_H
 #define QTMATERIALCHECKBOX_P_H
 
-#include "lib/qtmaterialcheckable_p.h"
+#include "shared/qtmaterialcheckable_p.h"
 
 class QtMaterialCheckBox;
 

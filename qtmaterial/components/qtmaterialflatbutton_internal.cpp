@@ -4,7 +4,7 @@
 #include <QFocusEvent>
 #include <QSequentialAnimationGroup>
 #include "qtmaterialflatbutton.h"
-#include "lib/qtmaterialstatetransition.h"
+#include "shared/qtmaterialstatetransition.h"
 
 /*!
  *  \class QtMaterialFlatButtonStateMachine

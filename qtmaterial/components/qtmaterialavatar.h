@@ -2,7 +2,7 @@
 #define QTMATERIALAVATAR_H
 
 //#include <QtWidgets/QWidget>
-#include "lib/qtmaterialtheme.h"
+#include "shared/qtmaterialtheme.h"
 #include <QtWidgets/qabstractbutton.h>
 
 class QtMaterialAvatarPrivate;

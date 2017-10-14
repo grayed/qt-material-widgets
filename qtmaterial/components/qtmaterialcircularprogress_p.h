@@ -2,7 +2,7 @@
 #define QTMATERIALCIRCULARPROGRESS_P_H
 
 #include <QtGlobal>
-#include "lib/qtmaterialtheme.h"
+#include "shared/qtmaterialtheme.h"
 
 class QtMaterialCircularProgress;
 class QtMaterialCircularProgressDelegate;

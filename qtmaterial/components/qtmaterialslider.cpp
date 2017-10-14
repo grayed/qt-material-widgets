@@ -3,8 +3,8 @@
 #include <QtWidgets/QApplication>
 #include <QMouseEvent>
 #include "qtmaterialslider_internal.h"
-#include "lib/qtmaterialstyle.h"
-#include "lib/qtmaterialstatetransitionevent.h"
+#include "shared/qtmaterialstyle.h"
+#include "shared/qtmaterialstatetransitionevent.h"
 
 /*!
  *  \class QtMaterialSliderPrivate

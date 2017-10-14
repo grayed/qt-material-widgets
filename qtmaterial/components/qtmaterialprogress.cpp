@@ -3,7 +3,7 @@
 #include <QPropertyAnimation>
 #include <QPainter>
 #include "qtmaterialprogress_internal.h"
-#include "lib/qtmaterialstyle.h"
+#include "shared/qtmaterialstyle.h"
 
 /*!
  *  \class QtMaterialProgressPrivate

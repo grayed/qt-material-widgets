@@ -1,7 +1,7 @@
 #ifndef QTMATERIALSNACKBAR_H
 #define QTMATERIALSNACKBAR_H
 
-#include "lib/qtmaterialoverlaywidget.h"
+#include "shared/qtmaterialoverlaywidget.h"
 
 class QtMaterialSnackbarPrivate;
 

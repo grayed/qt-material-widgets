@@ -2,7 +2,7 @@
 #define DRAWER_INTERNAL_H
 
 #include <QStateMachine>
-#include "lib/qtmaterialoverlaywidget.h"
+#include "shared/qtmaterialoverlaywidget.h"
 
 class QtMaterialDrawer;
 class QtMaterialDrawerWidget;

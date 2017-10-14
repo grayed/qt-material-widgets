@@ -3,7 +3,7 @@
 #include <QPainter>
 #include <QDebug>
 #include "qtmaterialscrollbar_internal.h"
-#include "lib/qtmaterialstyle.h"
+#include "shared/qtmaterialstyle.h"
 
 /*!
  *  \class QtMaterialScrollBarPrivate

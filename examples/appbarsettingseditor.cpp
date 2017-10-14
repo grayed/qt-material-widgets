@@ -3,7 +3,7 @@
 #include <QColorDialog>
 #include <qtmaterialappbar.h>
 #include <qtmaterialiconbutton.h>
-#include <lib/qtmaterialtheme.h>
+#include <shared//qtmaterialtheme.h>
 
 AppBarSettingsEditor::AppBarSettingsEditor(QWidget *parent)
     : QWidget(parent),

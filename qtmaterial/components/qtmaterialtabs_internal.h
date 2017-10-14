@@ -1,7 +1,7 @@
 #ifndef QTMATERIALTABS_INTERNAL_H
 #define QTMATERIALTABS_INTERNAL_H
 
-#include "lib/qtmaterialoverlaywidget.h"
+#include "shared/qtmaterialoverlaywidget.h"
 #include "qtmaterialflatbutton.h"
 
 class QPropertyAnimation;

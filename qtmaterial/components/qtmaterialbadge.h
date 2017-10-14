@@ -1,7 +1,7 @@
 #ifndef QTMATERIALBADGE_H
 #define QTMATERIALBADGE_H
 
-#include "lib/qtmaterialoverlaywidget.h"
+#include "shared/qtmaterialoverlaywidget.h"
 
 class QtMaterialBadgePrivate;
 

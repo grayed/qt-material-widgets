@@ -2,7 +2,7 @@
 #define QTMATERIALDIALOG_H
 
 #include <QScopedPointer>
-#include "lib/qtmaterialoverlaywidget.h"
+#include "shared/qtmaterialoverlaywidget.h"
 
 class QLayout;
 class QtMaterialDialogPrivate;

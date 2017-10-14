@@ -3,8 +3,8 @@
 #include <QtWidgets/QApplication>
 #include <QPainter>
 #include "qtmaterialsnackbar_internal.h"
-#include "lib/qtmaterialstyle.h"
-#include "lib/qtmaterialstatetransition.h"
+#include "shared/qtmaterialstyle.h"
+#include "shared/qtmaterialstatetransition.h"
 #include <QDebug>
 
 /*!

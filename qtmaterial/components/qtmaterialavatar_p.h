@@ -7,7 +7,7 @@
 #include <QIcon>
 #include <QPixmap>
 #include <QColor>
-#include "lib/qtmaterialtheme.h"
+#include "shared/qtmaterialtheme.h"
 
 class QtMaterialAvatar;
 

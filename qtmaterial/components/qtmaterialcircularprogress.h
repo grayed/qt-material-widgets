@@ -2,7 +2,7 @@
 #define QTMATERIALCIRCULARPROGRESS_H
 
 #include <QtWidgets/QProgressBar>
-#include "lib/qtmaterialtheme.h"
+#include "shared/qtmaterialtheme.h"
 
 class QtMaterialCircularProgressPrivate;
 

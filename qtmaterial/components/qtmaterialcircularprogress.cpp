@@ -4,7 +4,7 @@
 #include <QParallelAnimationGroup>
 #include <QPainter>
 #include "qtmaterialcircularprogress_internal.h"
-#include "lib/qtmaterialstyle.h"
+#include "shared/qtmaterialstyle.h"
 
 /*!
  *  \class QtMaterialCircularProgressPrivate

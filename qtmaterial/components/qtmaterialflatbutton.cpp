@@ -6,9 +6,9 @@
 #include <QBitmap>
 #include <QPainterPath>
 #include <QIcon>
-#include "lib/qtmaterialrippleoverlay.h"
-#include "lib/qtmaterialripple.h"
-#include "lib/qtmaterialstyle.h"
+#include "shared/qtmaterialrippleoverlay.h"
+#include "shared/qtmaterialripple.h"
+#include "shared/qtmaterialstyle.h"
 #include "qtmaterialflatbutton_internal.h"
 
 /*!

@@ -2,7 +2,7 @@
 #define QTMATERIALSLIDER_INTERNAL_H
 
 #include <QStateMachine>
-#include "lib/qtmaterialoverlaywidget.h"
+#include "shared/qtmaterialoverlaywidget.h"
 
 class QtMaterialSlider;
 class QtMaterialSliderThumb;

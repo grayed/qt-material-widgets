@@ -1,7 +1,7 @@
 #ifndef QTMATERIALDRAWER_H
 #define QTMATERIALDRAWER_H
 
-#include "lib/qtmaterialoverlaywidget.h"
+#include "shared/qtmaterialoverlaywidget.h"
 
 class QtMaterialDrawerPrivate;
 class QtMaterialDrawerStateMachine;

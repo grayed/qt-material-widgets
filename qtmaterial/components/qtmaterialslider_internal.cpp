@@ -6,8 +6,8 @@
 #include <QPropertyAnimation>
 #include <QPainter>
 #include "qtmaterialslider.h"
-#include "lib/qtmaterialstyle.h"
-#include "lib/qtmaterialstatetransition.h"
+#include "shared/qtmaterialstyle.h"
+#include "shared/qtmaterialstatetransition.h"
 
 /*!
  *  \class QtMaterialSliderStateMachine

@@ -2,7 +2,7 @@
 #define QTMATERIALTABS_P_H
 
 #include <QtGlobal>
-#include "lib/qtmaterialtheme.h"
+#include "shared/qtmaterialtheme.h"
 
 class QHBoxLayout;
 class QtMaterialTabs;

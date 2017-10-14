@@ -4,7 +4,7 @@
 #include <QState>
 #include <QPropertyAnimation>
 #include <QColor>
-#include "lib/qtmaterialcheckable_internal.h"
+#include "shared/qtmaterialcheckable_internal.h"
 
 /*!
  *  \class QtMaterialRadioButtonPrivate

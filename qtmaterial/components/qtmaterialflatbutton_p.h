@@ -3,7 +3,7 @@
 
 #include <QtGlobal>
 #include <QColor>
-#include "lib/qtmaterialtheme.h"
+#include "shared/qtmaterialtheme.h"
 
 class QtMaterialFlatButton;
 class QtMaterialRippleOverlay;

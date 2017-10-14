@@ -3,7 +3,7 @@
 
 #include <QtWidgets/QWidget>
 #include <QIcon>
-#include "lib/qtmaterialtheme.h"
+#include "shared/qtmaterialtheme.h"
 
 class QtMaterialTabsPrivate;
 class QtMaterialTab;

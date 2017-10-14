@@ -2,7 +2,7 @@
 #include "qtmaterialappbar_p.h"
 #include <QtWidgets/QGraphicsDropShadowEffect>
 #include <QPainter>
-#include "lib/qtmaterialstyle.h"
+#include "shared/qtmaterialstyle.h"
 
 /*!
  *  \class QtMaterialAppBarPrivate
