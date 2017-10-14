@@ -13,6 +13,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_HOME_DIRECTORY}/build)
 set(CMAKE_PDB_OUTPUT_DIRECTORY     ${CMAKE_HOME_DIRECTORY}/build)
 
 # add subs
-add_subdirectory(components)
+add_subdirectory(qtmaterial)
 add_subdirectory(demons)
 add_subdirectory(examples)

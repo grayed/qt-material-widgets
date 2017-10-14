@@ -21,7 +21,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/appbar.gif" />
+        <img src="docs/gifs/appbar.gif" />
       </td>
     </tr>
     <tr>
@@ -34,7 +34,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/avatar.gif" />
+        <img src="docs/gifs/avatar.gif" />
       </td>
     </tr>
     <tr>
@@ -47,7 +47,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/badge.gif" />
+        <img src="docs/gifs/badge.gif" />
       </td>
     </tr>
     <tr>
@@ -60,7 +60,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/checkbox.gif" />
+        <img src="docs/gifs/checkbox.gif" />
       </td>
     </tr>
     <tr>
@@ -73,7 +73,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/circularprogress.gif" />
+        <img src="docs/gifs/circularprogress.gif" />
       </td>
     </tr>
     <tr>
@@ -86,7 +86,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/dialog.gif" />
+        <img src="docs/gifs/dialog.gif" />
       </td>
     </tr>
     <tr>
@@ -99,7 +99,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2">
-        <img src="gifs/drawer.gif" />
+        <img src="docs/gifs/drawer.gif" />
       </td>
     </tr>
     <tr>
@@ -112,7 +112,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/fab.gif" />
+        <img src="docs/gifs/fab.gif" />
       </td>
     </tr>
     <tr>
@@ -125,7 +125,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/flatbutton.gif" />
+        <img src="docs/gifs/flatbutton.gif" />
       </td>
     </tr>
     <tr>
@@ -138,7 +138,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/iconbutton.gif" />
+        <img src="docs/gifs/iconbutton.gif" />
       </td>
     </tr>
     <tr>
@@ -151,7 +151,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/progress.gif" />
+        <img src="docs/gifs/progress.gif" />
       </td>
     </tr>
     <tr>
@@ -164,7 +164,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/radiobutton.gif" />
+        <img src="docs/gifs/radiobutton.gif" />
       </td>
     </tr>
     <tr>
@@ -177,7 +177,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/raisedbutton.gif" />
+        <img src="docs/gifs/raisedbutton.gif" />
       </td>
     </tr>
     <tr>
@@ -190,7 +190,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/scrollbar.gif" />
+        <img src="docs/gifs/scrollbar.gif" />
       </td>
     </tr>
     <tr>
@@ -203,7 +203,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/slider.gif" />
+        <img src="docs/gifs/slider.gif" />
       </td>
     </tr>
     <tr>
@@ -216,7 +216,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/snackbar.gif" />
+        <img src="docs/gifs/snackbar.gif" />
       </td>
     </tr>
     <tr>
@@ -229,7 +229,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/tabs.gif" />
+        <img src="docs/gifs/tabs.gif" />
       </td>
     </tr>
     <tr>
@@ -242,7 +242,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/textfield.gif" />
+        <img src="docs/gifs/textfield.gif" />
       </td>
     </tr>
     <tr>
@@ -255,7 +255,7 @@ I finally took the time to go through and clean up this code. The build includes
     </tr>
     <tr>
       <td colspan="2" align="center">
-        <img src="gifs/toggle.gif" />
+        <img src="docs/gifs/toggle.gif" />
       </td>
     </tr>
   </tbody>
