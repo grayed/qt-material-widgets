@@ -48,14 +48,14 @@ void QtMaterialAvatarPrivate::init()
  */
 
 QtMaterialAvatar::QtMaterialAvatar(QWidget *parent)
-    : QWidget(parent),
+    : QAbstractButton(parent),
       d_ptr(new QtMaterialAvatarPrivate(this))
 {
     d_func()->init();
 }
 
 QtMaterialAvatar::QtMaterialAvatar(const QIcon &icon, QWidget *parent)
-    : QWidget(parent),
+    : QAbstractButton(parent),
       d_ptr(new QtMaterialAvatarPrivate(this))
 {
     d_func()->init();
@@ -64,7 +64,7 @@ QtMaterialAvatar::QtMaterialAvatar(const QIcon &icon, QWidget *parent)
 }
 
 QtMaterialAvatar::QtMaterialAvatar(const QChar &letter, QWidget *parent)
-    : QWidget(parent),
+    : QAbstractButton(parent),
       d_ptr(new QtMaterialAvatarPrivate(this))
 {
     d_func()->init();
@@ -73,7 +73,7 @@ QtMaterialAvatar::QtMaterialAvatar(const QChar &letter, QWidget *parent)
 }
 
 QtMaterialAvatar::QtMaterialAvatar(const QImage &image, QWidget *parent)
-    : QWidget(parent),
+    : QAbstractButton(parent),
       d_ptr(new QtMaterialAvatarPrivate(this))
 {
     d_func()->init();
