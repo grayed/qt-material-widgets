@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.5.0)
 
 # project
-project(qtmeterial-example)
+project(qtmeterial-demons)
 
 # source
 file(GLOB_RECURSE SOURCES *.cpp *.h *.qrc *.ui)
@@ -15,7 +15,7 @@ find_package(Qt5 COMPONENTS Core Widgets Gui REQUIRED)
 
 # target
 include_directories(../components)
-add_executable(${PROJECT_NAME} WIN32 ${SOURCES})
+add_executable(${PROJECT_NAME} WIN32 ${SOURCES} demons.rc)
 target_link_libraries(${PROJECT_NAME} qtmeterial)
 target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Widgets Qt5::Gui)
 
