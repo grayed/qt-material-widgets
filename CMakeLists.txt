@@ -14,5 +14,5 @@ set(CMAKE_PDB_OUTPUT_DIRECTORY     ${CMAKE_HOME_DIRECTORY}/build)
 
 # add subs
 add_subdirectory(components)
-add_subdirectory(examples)
-
+add_subdirectory(example)
+add_subdirectory(test)
