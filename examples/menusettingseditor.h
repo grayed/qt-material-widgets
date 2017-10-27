@@ -4,7 +4,7 @@
 #include <QWidget>
 //#include "ui_menusettingsform.h"
 
-#include "lib/qtmaterialoverlaywidget.h"
+#include "shared/qtmaterialoverlaywidget.h"
 
 class QtMaterialMenu;
 
