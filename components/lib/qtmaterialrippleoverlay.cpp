@@ -24,6 +24,9 @@ void QtMaterialRippleOverlay::addRipple(QtMaterialRipple *ripple)
     ripple->setOverlay(this);
     m_ripples.push_back(ripple);
     ripple->start();
+
+    connect(this, SIGNAL(destroyed(QObject*)), ripple, SLOT(stop()));
+    connect(this, SIGNAL(destroyed(QObject*)), ripple, SLOT(deleteLater()));
 }
 
 void QtMaterialRippleOverlay::addRipple(const QPoint &position, qreal radius)
