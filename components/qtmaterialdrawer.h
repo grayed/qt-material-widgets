@@ -26,15 +26,17 @@ public:
     void setAutoRaise(bool state);
     bool autoRaise() const;
 
+    void setOverlayMode(bool value);
+    bool overlayMode() const;
+
 public slots:
     void openDrawer();
     void closeDrawer();
 
 protected:
+    bool event(QEvent *event) Q_DECL_OVERRIDE;
     bool eventFilter(QObject *obj, QEvent *event) Q_DECL_OVERRIDE;
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
-
-    QRect overlayGeometry() const Q_DECL_OVERRIDE;
 
     const QScopedPointer<QtMaterialDrawerPrivate> d_ptr;
 

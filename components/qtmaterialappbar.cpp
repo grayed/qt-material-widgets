@@ -1,7 +1,6 @@
 #include "qtmaterialappbar.h"
 #include "qtmaterialappbar_p.h"
 #include <QtWidgets/QGraphicsDropShadowEffect>
-#include <QtWidgets/QHBoxLayout>
 #include <QPainter>
 #include "lib/qtmaterialstyle.h"
 
@@ -50,7 +49,8 @@ void QtMaterialAppBarPrivate::init()
  */
 
 QtMaterialAppBar::QtMaterialAppBar(QWidget *parent)
-    : QWidget(parent)
+    : QWidget(parent),
+      d_ptr(new QtMaterialAppBarPrivate(this))
 {
     d_func()->init();
 }
