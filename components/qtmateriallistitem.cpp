@@ -144,14 +144,23 @@ int QtMaterialListItem::size() const
 
     return d->size;
 }
+//void QtMaterialListItem::setLetter(QString *firstLine)
+//{
+//	setLetter( firstLine, NULL, NULL);
+//}
+//void QtMaterialListItem::setLetter(QString *firstLine, QString *secondLine )
+//{
+//	setLetter( firstLine, secondLine, NULL );
+//}
 
-void QtMaterialListItem::setLetter(const QString &firstLine, const QString &secondLine = 0, const QString &thirdLine = 0)
+// void QtMaterialListItem::setLetter(const QString &firstLine, const QString &secondLine = 0, const QString &thirdLine = 0)
+void QtMaterialListItem::setLetter(const QString &firstLine ) // , QString *secondLine = QString() , QString *thirdLine = QString())
 {
     Q_D(QtMaterialListItem);
 
     d->firstLine = firstLine;
-    d->secondLine = secondLine
-    d->thirdLine = thirdLine
+    //d->secondLine = secondLine;
+    //d->thirdLine = thirdLine;
     d->type = Material::LetterListItem;
     update();
 }
@@ -251,6 +260,6 @@ void QtMaterialListItem::paintEvent(QPaintEvent *event)
     painter.setFont( font );
     painter.setPen(QtMaterialStyle::instance().themeColor("text"));
 
-    painter.drawText(textRect, Qt::AlignLeft + Qt::AlignVCenter, QString(d->letter));
+    painter.drawText(textRect, Qt::AlignLeft + Qt::AlignVCenter, QString(d->firstLine));
 
 }
