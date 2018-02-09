@@ -31,7 +31,7 @@ public:
     void setSize(int size);
     int size() const;
 
-    void setLetter(const QString &letter);
+    void setLetter(const QString &firstLine, const QString &secondLine = 0, const QString &thirdLine = 0);
     void setImage(const QImage &image);
     void setIcon(const QIcon &icon);
 

@@ -38,7 +38,7 @@ void QtMaterialListItemPrivate::init()
 
     q->setContentsMargins(0,0,0,0);
 
-    QSizePolicy policy(QSizePolicy::MinimumExpanding,
+    QSizePolicy policy(QSizePolicy::Ignored,
                        QSizePolicy::Fixed);
     q->setSizePolicy(policy);
 }
@@ -145,11 +145,13 @@ int QtMaterialListItem::size() const
     return d->size;
 }
 
-void QtMaterialListItem::setLetter(const QString &letter)
+void QtMaterialListItem::setLetter(const QString &firstLine, const QString &secondLine = 0, const QString &thirdLine = 0)
 {
     Q_D(QtMaterialListItem);
 
-    d->letter = letter;
+    d->firstLine = firstLine;
+    d->secondLine = secondLine
+    d->thirdLine = thirdLine
     d->type = Material::LetterListItem;
     update();
 }

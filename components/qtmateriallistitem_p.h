@@ -25,7 +25,9 @@ public:
     QtMaterialListItem *const q_ptr;
     int                     size;
     Material::ListItemType  type;
-    QString                 letter;
+    QString                 firstLine;
+    QString                 secondLine;
+    QString                 thirdLine;
     QImage                  image;
     QIcon                   icon;
     QPixmap                 pixmap;
