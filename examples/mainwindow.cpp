@@ -20,6 +20,7 @@
 #include "dialogsettingseditor.h"
 #include "drawersettingseditor.h"
 #include "scrollbarsettingseditor.h"
+#include "listitemsettingseditor.h"
 #include "appbarsettingseditor.h"
 #include "autocompletesettingseditor.h"
 #include "menusettingseditor.h"
@@ -60,6 +61,7 @@ MainWindow::MainWindow(QWidget *parent)
     DialogSettingsEditor *dialog = new DialogSettingsEditor;
     DrawerSettingsEditor *drawer = new DrawerSettingsEditor;
     ScrollBarSettingsEditor *scrollBar = new ScrollBarSettingsEditor;
+    ListItemSettingsEditor *listItem = new ListItemSettingsEditor;
     AppBarSettingsEditor *appBar = new AppBarSettingsEditor;
     AutoCompleteSettingsEditor *autocomplete = new AutoCompleteSettingsEditor;
     MenuSettingsEditor *menu = new MenuSettingsEditor;
@@ -75,6 +77,7 @@ MainWindow::MainWindow(QWidget *parent)
     stack->addWidget(fab);
     stack->addWidget(flatButton);
     stack->addWidget(iconButton);
+    stack->addWidget(listItem);
     stack->addWidget(menu);
     stack->addWidget(progress);
     stack->addWidget(radioButton);
@@ -97,6 +100,7 @@ MainWindow::MainWindow(QWidget *parent)
     list->addItem("Floating Action Button");
     list->addItem("Flat Button");
     list->addItem("Icon Button");
+    list->addItem("List Item");
     list->addItem("Menu");
     list->addItem("Progress");
     list->addItem("Radio Button");
